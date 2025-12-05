@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Conexão Consciente - Termos de Uso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        :root {
+            --primary: #8B5CF6;
+            --primary-light: #C4B5FD;
+            --background-light: #F9FAFB;
+            --background-dark: #1F2937;
+            --text-light: #6B7280;
+            --text-dark: #D1D5DB;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--primary)",
+                        "primary-light": "var(--primary-light)",
+                        "background-light": "var(--background-light)",
+                        "background-dark": "var(--background-dark)",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Cabeçalho -->
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-6 md:px-10 py-4 fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 text-gray-900 dark:text-white hover:opacity-80 transition-opacity">
+                    <img src="imagens/Logo.png" alt="Logo Conexão Consciente" class="size-14 rounded-full">
+                    <h2 class="text-xl font-bold leading-tight tracking-tight">Conexão Consciente</h2>
+                </a>
+                
+                <!-- Menu de navegação desktop -->
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <div class="flex items-center gap-8">
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal transition-colors" href="index.html">Início</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal transition-colors" href="dicas.html">Dicas</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal transition-colors" href="teste.html">Teste</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal transition-colors" href="Sobre nos.html">Sobre Nós</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal transition-colors" href="Contato.html">Contato</a>
+                    </div>
+                    <a href="teste.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors">
+                        <span class="truncate">Faça o Teste</span>
+                    </a>
+                </div>
+                
+                <!-- Botão menu mobile -->
+                <button class="md:hidden flex items-center justify-center size-10 rounded-lg text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" id="mobile-menu-button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+
+            <!-- Menu mobile -->
+            <div class="md:hidden fixed top-16 left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 p-6 z-40 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light py-2 text-base font-medium transition-colors" href="index.html">inicio</a>
+                    <a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light py-2 text-base font-medium transition-colors" href="sintomas.html">Sintomas</a>
+                    <a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light py-2 text-base font-medium transition-colors" href="ajuda.html">Ajuda</a>
+                    <a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light py-2 text-base font-medium transition-colors" href="artigos.html">Artigos</a>
+                    <a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light py-2 text-base font-medium transition-colors" href="Sobre nos.html">Sobre Nós</a>
+                    <a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light py-2 text-base font-medium transition-colors" href="teste.html">Faça o Teste</a>
+                    <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm py-2 block font-semibold" href="termos.html">Termos de Uso</a>
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm py-2 block" href="privacidade.html">Política de Privacidade</a>
+                        <a class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm py-2 block" href="contato.html">Contato</a>
+                    </div>
+                </div>
+            </div>
+
+            <main class="flex flex-col flex-1 pt-20">
+                <!-- Banner -->
+                <div class="w-full bg-violet-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+                    <div class="max-w-4xl mx-auto px-6 md:px-10 py-16 text-center">
+                        <h1 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight tracking-tight">Termos de Uso</h1>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Bem-vindo ao Conexão Consciente. Ao usar nosso site, você concorda com os seguintes termos e condições.</p>
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Última atualização: 01 de Dezembro de 2025</p>
+                    </div>
+                </div>
+
+                <!-- Conteúdo dos Termos -->
+                <div class="px-6 md:px-10 flex justify-center py-12 md:py-16">
+                    <div class="max-w-4xl w-full prose dark:prose-invert prose-violet prose-lg text-gray-700 dark:text-gray-300 prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-bold prose-a:text-primary hover:prose-a:text-violet-600 dark:prose-a:text-primary-light dark:hover:prose-a:text-white prose-strong:text-gray-800 dark:prose-strong:text-gray-100">
+                        <h2>1. Aceitação dos Termos</h2>
+                        <p>Ao acessar e utilizar o site Conexão Consciente, você aceita e concorda em estar vinculado aos termos e disposições deste acordo. Além disso, ao utilizar os serviços específicos deste site, você estará sujeito a quaisquer diretrizes ou regras aplicáveis a tais serviços. A participação neste site constituirá aceitação deste acordo.</p>
+                        
+                        <h2>2. Propósito Educacional</h2>
+                        <p>Todo o conteúdo fornecido no Conexão Consciente — incluindo textos, gráficos, imagens e informações — destina-se apenas a fins informativos e educacionais. As informações aqui contidas não substituem aconselhamento, diagnóstico ou tratamento médico profissional. Sempre procure o conselho de seu médico ou outro profissional de saúde qualificado com quaisquer perguntas que você possa ter sobre uma condição médica.</p>
+                        
+                        <h2>3. Uso do Conteúdo</h2>
+                        <p>O conteúdo deste site é protegido por direitos autorais. Você pode acessar e usar as informações para seu uso pessoal e não comercial. Qualquer outra utilização, incluindo a reprodução, modificação, distribuição, transmissão ou exibição do conteúdo, é estritamente proibida sem a nossa permissão prévia por escrito.</p>
+                        <ul>
+                            <li><strong>Permitido:</strong> Baixar ou imprimir materiais para uso pessoal e educativo.</li>
+                            <li><strong>Não Permitido:</strong> Usar nosso conteúdo para fins comerciais ou redistribuí-lo sem crédito e permissão.</li>
+                        </ul>
+                        
+                        <h2>4. Conduta do Usuário</h2>
+                        <p>Você concorda em não usar o site para qualquer finalidade que seja ilegal ou proibida por estes termos. Você não pode usar o site de qualquer maneira que possa danificar, desativar, sobrecarregar ou prejudicar o site, ou interferir no uso e gozo do site por parte de terceiros. Comentários e interações devem ser respeitosos e construtivos.</p>
+                        
+                        <h2>5. Limitação de Responsabilidade</h2>
+                        <p>O Conexão Consciente não será responsável por quaisquer perdas ou danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do seu acesso, uso ou incapacidade de usar este site. As ferramentas e testes fornecidos são para autoconsciência e não constituem um diagnóstico clínica.</p>
+                        
+                        <h2>6. Alterações nos Termos</h2>
+                        <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. Iremos notificá-lo sobre quaisquer alterações, publicando os novos Termos de Uso neste site. É sua responsabilidade revisar estes Termos de Uso periodicamente. O uso continuado do site após a publicação de alterações constituirá sua aceitação das mesmas.</p>
+                        
+                        <h2>7. Contato</h2>
+                        <p>Se você tiver alguma dúvida sobre estes Termos de Uso, entre em contato conosco através da nossa página de <a href="contato.html">Contato</a>.</p>
+                        
+                        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Leia também nossa <a href="privacidade.html" class="font-semibold">Política de Privacidade</a> para entender como protegemos suas informações.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Rodapé -->
+            <footer class="w-full bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+                <div class="max-w-7xl mx-auto py-12 px-6 md:px-10">
+                    <!-- Grade de links do rodapé -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                        <!-- Coluna 1: Logo e descrição -->
+                        <div>
+                            <a href="index.html" class="flex items-center gap-3 text-gray-900 dark:text-white mb-4">
+                                <div class="size-8 text-primary">
+                                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+                                        <path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold leading-tight tracking-tight">Conexão Consciente</h3>
+                            </a>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Ajudando você a encontrar o equilíbrio entre a vida digital e o bem-estar pessoal.</p>
+                        </div>
+
+                        <!-- Coluna 2: Navegação -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Navegação</h4>
+                            <ul class="space-y-2">
+                                <li><a href="index.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Início</a></li>
+                                <li><a href="dicas.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Dicas</a></li>
+                                <li><a href="teste.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Teste</a></li>
+                                <li><a href="Sobre nos.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Sobre Nós</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Coluna 3: Recursos -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recursos</h4>
+                            <ul class="space-y-2">
+                                <li><a href="teste.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Faça o Teste</a></li>
+                                <li><a href="dicas.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Dicas Práticas</a></li>
+                                <li><a href="artigos.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Artigos</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Coluna 4: Legal -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Legal</h4>
+                            <ul class="space-y-2">
+                                <li><a href="Termos de Uso.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors font-semibold">Termos de Uso</a></li>
+                                <li><a href="privacidade.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Política de Privacidade</a></li>
+                                <li><a href="Contato.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    <!-- Script para menu mobile -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

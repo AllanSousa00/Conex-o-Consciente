@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Artigos - Conexão Consciente</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+        :root {
+            --primary: #8B5CF6;--primary-light: #C4B5FD;
+            --background-light: #F9FAFB;--background-dark: #1F2937;
+            --text-light: #6B7280;
+            --text-dark: #D1D5DB;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--primary)",
+                        "primary-light": "var(--primary-light)",
+                        "background-light": "var(--background-light)",
+                        "background-dark": "var(--background-dark)",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-6 md:px-10 py-4 fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg">
+                <a href="index.html" class="flex items-center gap-3 text-gray-900 dark:text-white hover:opacity-80 transition-opacity">
+                    <img src="imagens/Logo.png" alt="Logo Conexão Consciente" class="size-8 rounded-full">
+                    <h2 class="text-xl font-bold leading-tight tracking-tight">Conexão Consciente</h2>
+                </a>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <div class="flex items-center gap-8">
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal" href="index.html">Início</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal" href="dicas.html">Dicas</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal" href="teste.html">Teste</a>
+                        <a class="text-primary dark:text-primary-light text-sm font-bold leading-normal" href="artigos.html">Artigos</a>
+                        <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium leading-normal" href="Contato.html">Contato</a>
+                    </div>
+                    <a href="teste.html">
+                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors">
+                            <span class="truncate">Faça o Teste</span>
+                        </button>
+                    </a>
+                </div>
+                <button class="md:hidden flex items-center justify-center size-10 rounded-lg text-primary" id="mobile-menu-button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden fixed top-16 left-0 right-0 bg-background-light dark:bg-background-dark z-40 hidden" id="mobile-menu">
+                <div class="flex flex-col p-4 border-t border-gray-200 dark:border-gray-800">
+                    <a class="py-3 px-4 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium border-b border-gray-100 dark:border-gray-800" href="index.html">Início</a>
+                    <a class="py-3 px-4 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium border-b border-gray-100 dark:border-gray-800" href="dicas.html">Dicas</a>
+                    <a class="py-3 px-4 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium border-b border-gray-100 dark:border-gray-800" href="teste.html">Teste</a>
+                    <a class="py-3 px-4 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium border-b border-gray-100 dark:border-gray-800" href="Sobre nos.html">Sobre Nós</a>
+                    <a class="py-3 px-4 text-primary dark:text-primary-light text-sm font-bold border-b border-gray-100 dark:border-gray-800" href="artigos.html">Artigos</a>
+                    <a class="py-3 px-4 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light text-sm font-medium border-b border-gray-100 dark:border-gray-800" href="Contato.html">Contato</a>
+                    <a class="py-3 px-4" href="teste.html">
+                        <button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-primary text-white text-sm font-semibold shadow-md hover:bg-violet-500 transition-colors">
+                            <span class="truncate">Faça o Teste</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <main class="flex flex-col flex-1 pt-20">
+                <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[1100px] flex-1">
+                        <section class="w-full pt-16 pb-12 md:pt-24 md:pb-20 text-center">
+                            <div class="flex flex-col items-center gap-6">
+                                <h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl">Artigos e Pesquisas</h1>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed max-w-2xl">Explore nossa biblioteca de artigos científicos e pesquisas sobre dependência digital, saúde mental e bem-estar tecnológico.</p>
+                            </div>
+                        </section>
+                        
+                        <section class="w-full pb-16 md:pb-24">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Artigo 1: Projeto Escolar -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div class="aspect-video w-full bg-cover bg-center" style='background-image: url("imagens/projeto-escolar.jpg"); background-color: #4F46E5;'></div>
+                                    <div class="flex flex-col p-6 gap-4 flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Dependência Digital e Vício em Redes Sociais</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Projeto escolar técnico sobre os impactos do uso excessivo de redes sociais na saúde mental de jovens e adolescentes.</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500">Autores: Allan da Cruz Sousa & Elano Rodrigues<br>Instituição: ECIT Márcia Guedes Alcoforado de Carvalho<br>Ano: 2025</p>
+                                        <div class="mt-auto pt-2"><a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors" href="imagens/Dependência digital e vício em redes sociais.pdf" target="_blank">Baixar PDF</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Artigo 2: Dependência Virtual -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div class="aspect-video w-full bg-cover bg-center" style='background-image: url("imagens/psicologia-digital.jpg"); background-color: #7C3AED;'></div>
+                                    <div class="flex flex-col p-6 gap-4 flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Dependência Virtual: Consequências Psicossociais e Intervenções</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Artigo acadêmico investigando as consequências da dependência virtual em adolescentes e adultos e intervenções psicológicas disponíveis.</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500">Autores: Adriana A. Silva, Michelle L. Rodrigues, Daniela Picolo<br>Publicação: Revista Científica FUNEC<br>Ano: 2018</p>
+                                        <div class="mt-auto pt-2"><a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors" href="imagens/administrador,+DEPENDÊNCIA+VIRTUAL.pdf" target="_blank">Baixar PDF</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Artigo 3: Uso Excessivo de Tecnologia -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div class="aspect-video w-full bg-cover bg-center" style='background-image: url("imagens/saude-publica.jpg"); background-color: #10B981;'></div>
+                                    <div class="flex flex-col p-6 gap-4 flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Uso Excessivo de Tecnologia e Saúde Pública</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Revisão narriva abordando as consequências do uso excessivo da tecnologia na saúde pública, com foco em crianças e adolescentes.</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500">Autores: Adamiane S. M. Schwaickardi et al.<br>Revista: Movimenta, v.14, n.1<br>Ano: 2021</p>
+                                        <div class="mt-auto pt-2"><a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors" href="imagens/cibelle,+9641+-+Layout+pronto (1).pdf" target="_blank">Baixar PDF</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Artigo 4: Processos Cognitivos e Diagnóstico -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div class="aspect-video w-full bg-cover bg-center" style='background-image: url("imagens/neurociencia.jpg"); background-color: #F59E0B;'></div>
+                                    <div class="flex flex-col p-6 gap-4 flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Dependência Digital: Processos Cognitivos e Diagnóstico</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Estudo neuropsicológico sobre os processos cognitivos envolvidos na dependência digital e critérios para diagnóstico clínico.</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500">Autor: Jefferson Cabral Azevedo et al.<br>Evento: IX Simpósio Nacional ABCiber<br>Ano: 2016</p>
+                                        <div class="mt-auto pt-2"><a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors" href="imagens/dependencia_digital__processos_cognitivos_e_diagnostico_jefferson_cabral_azevedo.pdf" target="_blank">Baixar PDF</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Artigo 5: Smartphone e Universitários -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div class="aspect-video w-full bg-cover bg-center" style='background-image: url("imagens/estudantes-universitarios.jpg"); background-color: #EF4444;'></div>
+                                    <div class="flex flex-col p-6 gap-4 flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Impacto do Smartphone na Atenção, Memória e Ansiedade de Universitários</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Revisão integrativa sobre os efeitos do uso do smartphone e redes sociais nos processos cognitivos e emocionais de estudantes universitários.</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500">Autores: Hélyda M. Borges & Rodrigo da S. Maia<br>Revista: Research, Society and Development<br>Ano: 2022</p>
+                                        <div class="mt-auto pt-2"><a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-md hover:bg-violet-500 transition-colors" href="imagens/dorlivete,+e539111537422-min.pdf" target="_blank">Baixar PDF</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Artigo Adicional: Espaço para novos artigos -->
+                                <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+                                    <div class="aspect-video w-full bg-cover bg-center flex items-center justify-center" style='background-color: #6B7280;'>
+                                        <span class="material-symbols-outlined text-white text-6xl">add</span>
+                                    </div>
+                                    <div class="flex flex-col p-6 gap-4 flex-1">
+                                        <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">Novos Artigos em Breve</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Estamos constantemente atualizando nossa biblioteca com novas pesquisas e estudos sobre dependência digital e saúde mental.</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-500">Conexão Consciente<br>Atualizações periódicas</p>
+                                        <div class="mt-auto pt-2"><a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-semibold leading-normal shadow-md" href="Contato.html">Sugerir Artigo</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            
+            <!-- Rodapé Completo -->
+            <footer class="w-full bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+                <div class="max-w-7xl mx-auto py-12 px-6 md:px-10">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                        <!-- Coluna 1: Logo e descrição -->
+                        <div>
+                            <a href="index.html" class="flex items-center gap-3 text-gray-900 dark:text-white mb-4">
+                                <img src="imagens/Logo.png" alt="Logo Conexão Consciente" class="size-8 rounded-full">
+                                <h3 class="text-xl font-bold leading-tight tracking-tight">Conexão Consciente</h3>
+                            </a>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Ajudando você a encontrar o equilíbrio entre a vida digital e o bem-estar pessoal.</p>
+                        </div>
+
+                        <!-- Coluna 2: Navegação -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Navegação</h4>
+                            <ul class="space-y-2">
+                                <li><a href="index.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Início</a></li>
+                                <li><a href="dicas.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Dicas</a></li>
+                                <li><a href="teste.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Teste</a></li>
+                                <li><a href="Sobre nos.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Sobre Nós</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Coluna 3: Recursos -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recursos</h4>
+                            <ul class="space-y-2">
+                                <li><a href="teste.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Faça o Teste</a></li>
+                                <li><a href="dicas.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Dicas Práticas</a></li>
+                                <li><a href="artigos.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Artigos</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Coluna 4: Legal -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Legal</h4>
+                            <ul class="space-y-2">
+                                <li><a href="Termos de Uso.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors font-semibold">Termos de Uso</a></li>
+                                <li><a href="Politica de privacidade.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Política de Privacidade</a></li>
+                                <li><a href="Contato.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                        <p class="text-sm text-gray-600 dark:text-gray-400">© 2025 Conexão Consciente. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

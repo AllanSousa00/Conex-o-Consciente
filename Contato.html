@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contato - Conexão Consciente</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8A70D6",
+                        "primary-light": "#F2EFFB",
+                        "background-light": "#F8F7FC",
+                        "background-dark": "#121019",
+                        "text-light": "#0F0D13",
+                        "text-dark": "#F8F7FC",
+                        "text-muted-light": "#676B79",
+                        "text-muted-dark": "#9DA3B4",
+                        "border-light": "#E5E1F0",
+                        "border-dark": "#2A263C"
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 12px 0 rgba(138, 112, 214, 0.1)',
+                        'soft-dark': '0 4px 12px 0 rgba(138, 112, 214, 0.05)',
+                        'button': '0 4px 14px 0 rgba(138, 112, 214, 0.3)'
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .success-message {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark antialiased">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-border-light dark:border-border-dark">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between whitespace-nowrap h-16">
+                    <a href="index.html" class="flex items-center gap-3 text-text-light dark:text-text-dark no-underline hover:opacity-80 transition-opacity">
+                        <div class="size-7 text-primary">
+                                <path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+                                <path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                         <img src="imagens/Logo.png" alt="Logo Conexão Consciente" class="size-14 rounded-full">
+                        <h2 class="text-lg font-bold tracking-tight">Conexão Consciente</h2>
+                    </a>
+                    <div class="flex flex-1 justify-end gap-8">
+                        <div class="hidden md:flex items-center gap-9">
+                            <a class="text-sm font-medium text-text-muted-light hover:text-primary dark:text-text-muted-dark dark:hover:text-primary transition-colors" href="index.html">Início</a>
+                            <a class="text-sm font-medium text-text-muted-light hover:text-primary dark:text-text-muted-dark dark:hover:text-primary transition-colors" href="dicas.html">Dicas</a>
+                            <a class="text-sm font-medium text-text-muted-light hover:text-primary dark:text-text-muted-dark dark:hover:text-primary transition-colors" href="teste.html">Teste</a>
+                            <a class="text-sm font-medium text-text-muted-light hover:text-primary dark:text-text-muted-dark dark:hover:text-primary transition-colors" href="Sobre nos.html">Sobre Nós</a>
+                            <a class="text-sm font-medium text-primary dark:text-primary-light bg-primary-light dark:bg-primary/20 transition-colors" href="Contato.html">Contato</a>
+                        </div>
+                        <button class="md:hidden flex items-center justify-center size-10 rounded-lg text-primary" id="mobile-menu-button">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed top-16 left-0 right-0 bg-background-light dark:bg-background-dark z-40 hidden" id="mobile-menu">
+            <div class="flex flex-col p-4 border-t border-border-light dark:border-border-dark">
+                <a class="py-3 px-4 text-text-muted-light dark:text-text-muted-dark hover:bg-primary-light dark:hover:bg-primary/10 text-sm font-medium" href="index.html">Início</a>
+                <a class="py-3 px-4 text-text-muted-light dark:text-text-muted-dark hover:bg-primary-light dark:hover:bg-primary/10 text-sm font-medium" href="dicas.html">Dicas</a>
+                <a class="py-3 px-4 text-text-muted-light dark:text-text-muted-dark hover:bg-primary-light dark:hover:bg-primary/10 text-sm font-medium" href="teste.html">Teste</a>
+                <a class="py-3 px-4 text-text-muted-light dark:text-text-muted-dark hover:bg-primary-light dark:hover:bg-primary/10 text-sm font-medium" href="Sobre nos.html">Sobre</a>
+                <a class="py-3 px-4 text-primary dark:text-primary-light bg-primary-light dark:bg-primary/20 text-sm font-medium" href="Contato.html">Contato</a>
+            </div>
+        </div>
+
+        <main class="flex-grow">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span class="text-sm font-bold uppercase tracking-wider text-primary">Fale Conosco</span>
+                    <h1 class="text-text-light dark:text-text-dark text-4xl md:text-5xl font-black tracking-tighter mt-2">
+                        Entre em Contato
+                    </h1>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-base md:text-lg max-w-2xl mx-auto mt-4">
+                        Tem alguma dúvida, sugestão ou precisa de ajuda? Use os canais abaixo para falar com a gente. Estamos aqui para te ouvir!
+                    </p>
+                </div>
+                
+                <!-- Mensagem de Sucesso (Oculto inicialmente) -->
+                <div id="success-message" class="hidden mt-8 max-w-4xl mx-auto">
+                    <div class="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-6 text-center success-message">
+                        <div class="flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-800/50 rounded-full mx-auto mb-4">
+                            <span class="material-symbols-outlined text-green-600 dark:text-green-400 text-3xl">check_circle</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-800 dark:text-green-300 mb-2">Mensagem Enviada com Sucesso!</h3>
+                        <p class="text-green-700 dark:text-green-400">Obrigado pelo seu contato. Responderemos em breve!</p>
+                        <button onclick="resetForm()" class="mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                            Enviar outra mensagem
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mensagem de Erro -->
+                <div id="error-message" class="hidden mt-8 max-w-4xl mx-auto">
+                    <div class="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-xl p-6 text-center">
+                        <div class="flex items-center justify-center w-16 h-16 bg-red-100 dark:bg-red-800/50 rounded-full mx-auto mb-4">
+                            <span class="material-symbols-outlined text-red-600 dark:text-red-400 text-3xl">error</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-800 dark:text-red-300 mb-2">Erro ao Enviar Mensagem</h3>
+                        <p class="text-red-700 dark:text-red-400" id="error-text">Ocorreu um erro. Tente novamente mais tarde.</p>
+                        <button onclick="hideError()" class="mt-4 px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+                            Tentar novamente
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start" id="contact-form">
+                    <div class="bg-white dark:bg-background-dark/50 p-6 md:p-8 rounded-xl border border-border-light dark:border-border-dark shadow-soft dark:shadow-soft-dark">
+                        <h2 class="text-2xl font-bold text-text-light dark:text-text-dark mb-6">Envie uma mensagem</h2>
+                        
+                        <!-- FORMULÁRIO PHP - Ação para enviar.php -->
+                        <form id="contactForm" class="space-y-6" action="enviar.php" method="POST">
+                            <div>
+                                <label class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark" for="name">Seu Nome *</label>
+                                <input class="mt-2 w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark/50 focus:border-primary focus:ring-primary focus:ring-2 focus:ring-opacity-50 transition duration-200 px-4 py-3"
+                                       id="name" 
+                                       name="name"
+                                       placeholder="Seu nome completo" 
+                                       type="text"
+                                       required/>
+                                <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">Obrigatório</p>
+                            </div>
+                            
+                            <div>
+                                <label class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark" for="email">Seu E-mail *</label>
+                                <input class="mt-2 w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark/50 focus:border-primary focus:ring-primary focus:ring-2 focus:ring-opacity-50 transition duration-200 px-4 py-3"
+                                       id="email" 
+                                       name="email"
+                                       placeholder="voce@email.com" 
+                                       type="email"
+                                       required/>
+                                <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">Obrigatório</p>
+                            </div>
+                            
+                            <div>
+                                <label class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark" for="subject">Assunto *</label>
+                                <select class="mt-2 w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark/50 focus:border-primary focus:ring-primary focus:ring-2 focus:ring-opacity-50 transition duration-200 px-4 py-3"
+                                        id="subject" 
+                                        name="subject"
+                                        required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="Dúvida sobre dependência digital">Dúvida sobre dependência digital</option>
+                                    <option value="Sugestão para o site">Sugestão para o site</option>
+                                    <option value="Preciso de ajuda">Preciso de ajuda</option>
+                                    <option value="Parceria ou colaboração">Parceria ou colaboração</option>
+                                    <option value="Outro assunto">Outro assunto</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark" for="message">Sua Mensagem *</label>
+                                <textarea class="mt-2 w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark/50 focus:border-primary focus:ring-primary focus:ring-primary focus:ring-2 focus:ring-opacity-50 transition duration-200 px-4 py-3"
+                                          id="message" 
+                                          name="message"
+                                          placeholder="Escreva sua dúvida ou sugestão aqui..." 
+                                          rows="5"
+                                          required></textarea>
+                                <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">Mínimo 20 caracteres</p>
+                            </div>
+                            
+                            <!-- Campo anti-spam (honeypot) -->
+                            <input type="text" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" id="consent" name="consent" class="mt-1 mr-3" required/>
+                                <label for="consent" class="text-sm text-text-muted-light dark:text-text-muted-dark">
+                                    Concordo com a <a href="privacidade.html" class="text-primary hover:underline">Política de Privacidade</a> e autorizo o uso dos meus dados para responder ao meu contato.
+                                </label>
+                            </div>
+                            
+                            <div class="pt-2">
+                                <button type="submit" id="submit-button" class="w-full inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-primary text-white text-base font-bold tracking-wide shadow-button hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/30 dark:focus:ring-offset-background-dark transition-all duration-300">
+                                    <span id="button-text">Enviar Mensagem</span>
+                                    <span id="loading-spinner" class="hidden ml-2">
+                                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-border-light dark:border-border-dark shadow-soft dark:shadow-soft-dark">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-light dark:bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-3xl">mail</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-light dark:text-text-dark">E-mail Direto</h3>
+                                    <p class="text-text-muted-light dark:text-text-muted-dark mt-1">Para dúvidas e suporte geral.</p>
+                                    <a class="text-primary font-medium mt-2 inline-block hover:underline break-all" href="mailto:contato@conexaoconsciente.com.br">
+                                        contato@conexaoconsciente.com.br
+                                    </a>
+                                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-2">Respondemos em até 48 horas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-border-light dark:border-border-dark shadow-soft dark:shadow-soft-dark">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-light dark:bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-3xl">support_agent</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-light dark:text-text-dark">Ajuda Imediata</h3>
+                                    <p class="text-text-muted-light dark:text-text-muted-dark mt-1">Se precisar de ajuda urgente:</p>
+                                    <div class="mt-3 space-y-2">
+                                        <a href="tel:188" class="flex items-center gap-2 text-red-600 dark:text-red-400 hover:underline">
+                                            <span class="material-symbols-outlined text-lg">phone</span>
+                                            <span class="font-medium">CVV - 188</span>
+                                            <span class="text-xs text-text-muted-light dark:text-text-muted-dark">(24 horas)</span>
+                                        </a>
+                                        <a href="tel:192" class="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline">
+                                            <span class="material-symbols-outlined text-lg">phone</span>
+                                            <span class="font-medium">SAMU - 192</span>
+                                            <span class="text-xs text-text-muted-light dark:text-text-muted-dark">(emergências)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-border-light dark:border-border-dark shadow-soft dark:shadow-soft-dark">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-light dark:bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-3xl">help_center</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-light dark:text-text-dark">Recursos Úteis</h3>
+                                    <p class="text-text-muted-light dark:text-text-muted-dark mt-1">Encontre ajuda e informações:</p>
+                                    <div class="mt-3 space-y-3">
+                                        <a href="dicas.html" class="flex items-center gap-2 text-primary hover:underline">
+                                            <span class="material-symbols-outlined text-lg">tips_and_updates</span>
+                                            <span>Dicas práticas</span>
+                                        </a>
+                                        <a href="teste.html" class="flex items-center gap-2 text-primary hover:underline">
+                                            <span class="material-symbols-outlined text-lg">psychology</span>
+                                            <span>Teste de autoavaliação</span>
+                                        </a>
+                                        <a href="privacidade.html" class="flex items-center gap-2 text-primary hover:underline">
+                                            <span class="material-symbols-outlined text-lg">policy</span>
+                                            <span>Política de privacidade</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-border-light dark:border-border-dark shadow-soft dark:shadow-soft-dark">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-light dark:bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-3xl">schedule</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-light dark:text-text-dark">Horário de Atendimento</h3>
+                                    <p class="text-text-muted-light dark:text-text-muted-dark mt-1">Segunda a Sexta-feira</p>
+                                    <p class="font-medium text-text-light dark:text-text-dark">9:00 às 18:00</p>
+                                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-2">Finais de semana e feriados: respostas podem levar mais tempo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Rodapé Completo -->
+        <footer class="w-full bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+            <div class="max-w-7xl mx-auto py-12 px-6 md:px-10">
+                <!-- Grade de links do rodapé -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <!-- Coluna 1: Logo e descrição -->
+                    <div>
+                        <a href="index.html" class="flex items-center gap-3 text-gray-900 dark:text-white mb-4">
+                            <img src="imagens/Logo.png" alt="Logo Conexão Consciente" class="size-14 rounded-full">
+                            <h3 class="text-xl font-bold leading-tight tracking-tight">Conexão Consciente</h3>
+                        </a>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Ajudando você a encontrar o equilíbrio entre a vida digital e o bem-estar pessoal.</p>
+                    </div>
+
+                    <!-- Coluna 2: Navegação -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Navegação</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Início</a></li>
+                            <li><a href="dicas.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Dicas</a></li>
+                            <li><a href="teste.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Teste</a></li>
+                            <li><a href="Sobre nos.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Sobre Nós</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Recursos -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recursos</h4>
+                        <ul class="space-y-2">
+                            <li><a href="teste.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Faça o Teste</a></li>
+                            <li><a href="dicas.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Dicas Práticas</a></li>
+                            <li><a href="artigos.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Artigos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 4: Legal -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="Termos de Uso.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors font-semibold">Termos de Uso</a></li>
+                            <li><a href="privacidade.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Política de Privacidade</a></li>
+                            <li><a href="Contato.html" class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (menu && button && !menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Form handling
+        const contactForm = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submit-button');
+        const buttonText = document.getElementById('button-text');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+        const formContainer = document.getElementById('contact-form');
+
+        // Prevent form submission if honeypot is filled (spam)
+        contactForm.addEventListener('submit', function(e) {
+            const honeypot = document.querySelector('input[name="honeypot"]').value;
+            if (honeypot) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Validate form before submission
+            if (!validateForm()) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Show loading state
+            buttonText.textContent = 'Enviando...';
+            loadingSpinner.classList.remove('hidden');
+            submitButton.disabled = true;
+            
+            // Form will submit normally to enviar.php
+            // PHP script will handle the email sending
+        });
+
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            const consent = document.getElementById('consent').checked;
+            
+            let isValid = true;
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => el.remove());
+            document.querySelectorAll('.border-red-500').forEach(el => el.classList.remove('border-red-500'));
+            
+            // Validate name
+            if (name.length < 2) {
+                showError('name', 'Nome deve ter pelo menos 2 caracteres');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showError('email', 'Por favor, insira um email válido');
+                isValid = false;
+            }
+            
+            // Validate subject
+            if (!subject) {
+                showError('subject', 'Por favor, selecione um assunto');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (message.length < 20) {
+                showError('message', 'A mensagem deve ter pelo menos 20 caracteres');
+                isValid = false;
+            }
+            
+            // Validate consent
+            if (!consent) {
+                showError('consent', 'Você precisa concordar com a política de privacidade');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const formGroup = field.closest('div');
+            
+            // Add red border to field
+            field.classList.add('border-red-500', 'border-2');
+            
+            // Create error message
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message text-red-600 dark:text-red-400 text-xs mt-1';
+            errorDiv.textContent = message;
+            
+            // Insert error message
+            if (fieldId === 'consent') {
+                formGroup.appendChild(errorDiv);
+            } else {
+                formGroup.appendChild(errorDiv);
+            }
+        }
+
+        // Check if we have success/error parameters in URL (from PHP redirect)
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+            const message = urlParams.get('message');
+            
+            if (status === 'success') {
+                showSuccessMessage();
+            } else if (status === 'error') {
+                showErrorMessage(message || 'Ocorreu um erro ao enviar sua mensagem.');
+            }
+        });
+
+        function showSuccessMessage() {
+            // Hide form
+            formContainer.classList.add('hidden');
+            
+            // Show success message
+            successMessage.classList.remove('hidden');
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showErrorMessage(customMessage) {
+            // Hide form
+            formContainer.classList.add('hidden');
+            
+            // Set error message
+            errorText.textContent = customMessage;
+            
+            // Show error message
+            errorMessage.classList.remove('hidden');
+            
+            // Scroll to error message
+            errorMessage.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hideError() {
+            // Hide error message
+            errorMessage.classList.add('hidden');
+            
+            // Show form again
+            formContainer.classList.remove('hidden');
+            
+            // Reset loading state
+            buttonText.textContent = 'Enviar Mensagem';
+            loadingSpinner.classList.add('hidden');
+            submitButton.disabled = false;
+        }
+
+        function resetForm() {
+            // Hide success message
+            successMessage.classList.add('hidden');
+            
+            // Show form again
+            formContainer.classList.remove('hidden');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Clear errors
+            document.querySelectorAll('.error-message').forEach(el => el.remove());
+            document.querySelectorAll('.border-red-500').forEach(el => el.classList.remove('border-red-500'));
+            
+            // Reset loading state
+            buttonText.textContent = 'Enviar Mensagem';
+            loadingSpinner.classList.add('hidden');
+            submitButton.disabled = false;
+            
+            // Remove URL parameters
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Real-time validation
+        document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
+            field.addEventListener('blur', () => {
+                validateField(field.id);
+            });
+            
+            field.addEventListener('input', () => {
+                // Remove error styling as user types
+                if (!field.classList.contains('border-red-500')) return;
+                
+                const formGroup = field.closest('div');
+                const errorDiv = formGroup.querySelector('.error-message');
+                if (errorDiv) {
+                    errorDiv.remove();
+                    field.classList.remove('border-red-500', 'border-2');
+                }
+            });
+        });
+
+        function validateField(fieldId) {
+            const field = document.getElementById(fieldId);
+            let isValid = true;
+            
+            switch(fieldId) {
+                case 'name':
+                    isValid = field.value.trim().length >= 2;
+                    if (!isValid) showError(fieldId, 'Nome deve ter pelo menos 2 caracteres');
+                    break;
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    isValid = emailRegex.test(field.value.trim());
+                    if (!isValid) showError(fieldId, 'Por favor, insira um email válido');
+                    break;
+                case 'message':
+                    isValid = field.value.trim().length >= 20;
+                    if (!isValid) showError(fieldId, 'A mensagem deve ter pelo menos 20 caracteres');
+                    break;
+                case 'subject':
+                    isValid = field.value !== '';
+                    if (!isValid) showError(fieldId, 'Por favor, selecione um assunto');
+                    break;
+            }
+            
+            if (isValid) {
+                field.classList.remove('border-red-500', 'border-2');
+                const formGroup = field.closest('div');
+                const errorDiv = formGroup.querySelector('.error-message');
+                if (errorDiv) errorDiv.remove();
+            }
+        }
+    </script>
+</body>
+</html>
